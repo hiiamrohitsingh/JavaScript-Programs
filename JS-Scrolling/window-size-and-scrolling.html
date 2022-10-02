@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Window sizes and scrolling</title>
+</head>
+
+<body>
+
+   <div class="container">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sequi reprehenderit consequuntur dignissimos quis aliquid saepe, expedita laborum, assumenda at laudantium provident fuga dicta nesciunt molestias voluptatem! Nemo, libero eius.</p>
+      <p>Eaque deleniti quia eius dolor ex quae iusto, quis itaque. Fugit mollitia temporibus culpa sunt veniam deserunt numquam doloribus autem rem quisquam aperiam vel, laborum aliquam quibusdam? Ullam, aperiam molestias?</p>
+      <p>Aspernatur, quia! Laborum non aliquid laudantium sequi tempore ipsum unde est, nesciunt magnam soluta voluptatum velit at eaque veritatis. Ducimus, corrupti minima consequuntur quidem id accusamus nisi dolores sint reiciendis!</p>
+      <p>Iusto sapiente ipsa eos doloribus perspiciatis quae iste aliquid corrupti, veniam laudantium impedit accusamus nam consequatur temporibus quia sint facere molestias cupiditate reiciendis nemo atque nihil ut officia praesentium! Cum.</p>
+      <p>Aut error tenetur tempore, molestiae vitae ut fugiat nihil delectus quod earum, dignissimos nesciunt adipisci doloribus. Corrupti nisi id, vitae dignissimos repellat eos voluptas laboriosam ex deserunt nesciunt repudiandae laudantium.</p>
+      <p>Obcaecati atque expedita ducimus praesentium neque nemo quae dolores officia ea, cupiditate vero error alias excepturi iste sit mollitia dolore incidunt illum fugiat eum eligendi laborum quas. Sit, quidem consectetur?</p>
+      <p>Corrupti, obcaecati maxime nisi voluptates ducimus rerum veritatis suscipit laborum assumenda nihil deserunt iusto hic, in consequatur ut culpa sapiente vel id excepturi? Illo quos unde quasi, ipsum sunt dolores.</p>
+      <p>Explicabo consectetur minima ipsum, similique delectus eos assumenda harum quam iusto quis, architecto enim sed. Molestiae sed delectus eveniet! Id voluptas recusandae nulla molestiae quisquam. Tempora eos quidem iusto fuga.</p>
+      <p>Est ex similique consequuntur non modi culpa quidem, eligendi rem molestiae distinctio? Laborum in odio veniam quo, exercitationem unde quia minima fugiat doloremque sit sapiente ipsum adipisci velit assumenda obcaecati!</p>
+      <p>Labore, animi quia maiores corporis soluta velit excepturi perspiciatis, beatae possimus corrupti exercitationem dolorum odit suscipit veritatis totam atque ea? Officia inventore, veniam in nam repellendus eaque libero necessitatibus quidem.</p>
+      <p>Magnam fugit excepturi laudantium, cum impedit molestias! Nisi totam optio reprehenderit inventore libero asperiores dignissimos nihil ullam voluptatum, enim sequi. Dolores ad illum ullam quam, nesciunt natus sit fugiat beatae.</p>
+      <p>Debitis voluptates voluptatibus sint? Iure sapiente sit necessitatibus quis ex error quasi enim quia nisi quae ipsum nesciunt, mollitia in numquam voluptatem consequatur molestias ratione, totam, et voluptas vel maxime?</p>
+      <p>Amet nemo ab deleniti quia excepturi, consectetur eligendi sint quos corporis inventore quidem, iste perferendis commodi temporibus nostrum? Alias asperiores dolorem minus aspernatur iure animi, nulla ut voluptates numquam eveniet!</p>
+      <p>Aut tenetur, sit unde eum, asperiores quisquam maiores suscipit laboriosam, inventore quidem temporibus rem nulla eaque? Expedita iusto ullam iure. Facere quaerat consectetur cupiditate voluptate tempora veniam officiis, quidem odio?</p>
+      <p>Harum et cumque corporis provident, reiciendis consequuntur dolorum! Facilis nesciunt ea nobis sequi, quis delectus ut dolorem aliquam eligendi, consectetur velit dolore minus sed quaerat, similique reprehenderit at accusamus! Consequatur?</p>
+      <p>Veritatis ab labore accusamus, error magni quo, ipsam possimus quis, mollitia quasi earum illo provident nostrum eligendi beatae? Porro corporis aliquid molestiae aperiam aut sit nulla odio unde repellendus eos.</p>
+      <p>Dolorum praesentium qui repellendus vel velit veniam doloribus nostrum neque, laboriosam dignissimos, delectus libero voluptatem. Sunt est, earum odio, quam dolore commodi voluptate pariatur provident eos voluptatibus nihil architecto sint.</p>
+      <p>Non, repudiandae qui! In minima autem necessitatibus vitae quibusdam, reiciendis, unde corporis possimus dolor cupiditate aliquam eos voluptate! Est voluptas molestiae quas maiores earum necessitatibus dignissimos pariatur accusamus sapiente fugiat.</p>
+      <p>Unde reiciendis quas saepe rem pariatur non architecto vero nulla! Eos doloremque quisquam minus dignissimos amet perferendis nihil provident molestias illum ut, ipsam quos dolorem voluptas nulla velit fugiat earum?</p>
+      <p>Itaque ratione esse, voluptatibus est voluptate in voluptatum veniam ex necessitatibus obcaecati assumenda ad. Quos minima voluptate deserunt maxime asperiores ex eum necessitatibus atque animi voluptatum, ipsam, esse, modi maiores?</p>
+   </div>
+
+   <script>
+      //Window sizes and scrolling.
+
+      //For this type of information, we can use the root document element document.documentElement, that corresponds to the <html> tag.
+
+      //To get window width and height, we can use the clientWidth/clientHeight of document.documentElement
+
+      console.log(document.documentElement.clientWidth); //corresponds to the <html> tag.
+      console.log(document.documentElement.clientHeight); //corresponds to the <html> tag.
+
+      console.log("alise-------------------------------");
+      console.log(window.innerWidth); //if there are scrollbar then it include but not clientWidth
+      console.log(window.innerHeight);
+
+      // NOTE:-  window.innerWidth/innerHeight includes the scrollbar.
+      // window.innerWidth --> full window width.
+      // document.documentElement.clientWidth --> window width minus the scrollbar.
+
+      //to scrolling height of the window.
+      console.log(document.documentElement.scrollHeight);
+
+      //to get the current scroll
+
+      document.body.addEventListener("click", function () {
+         console.log(window.scrollY);
+      });
+   </script>
+</body>
+
+</html>

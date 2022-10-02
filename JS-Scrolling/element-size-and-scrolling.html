@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Javascript Scrolling</title>
+   <style>
+      body {
+         font-family: Arial, Helvetica, sans-serif;
+         position: relative;
+      }
+
+      #container {
+         padding: 1em;
+         background-color: aliceblue;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+      }
+
+      #container #sub_container {
+         width: 300px;
+         height: 300px;
+         background-color: blueviolet;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+      }
+
+      #container #sub_container #sub_sub_container {
+         width: 150px;
+         height: 150px;
+         background-color: blue;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+      }
+
+      #container #sub_container #sub_sub_container #sub_sub_sub_container {
+         width: 75px;
+         height: 75px;
+         background-color: red;
+         position: absolute;
+         top: 5px;
+         left: 5px;
+      }
+   </style>
+</head>
+
+<body id="body">
+
+   <div id="container">
+      <div id="sub_container">
+         <div id="sub_sub_container">
+            <div id="sub_sub_sub_container"></div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      function get_off_scroll_client(e) {
+         let ele = document.getElementById(e);
+         console.log("offset--------------->");
+         console.log(`${e} offsetTop ${ele.offsetTop}`);
+         console.log(`${e} offsetLeft ${ele.offsetLeft}`);
+         console.log(`${e} offsetWidth ${ele.offsetWidth}`);
+         console.log(`${e} offsetHeight ${ele.offsetHeight}`);
+         console.log("client--------------->");
+         console.log(`${e} offsetTop ${ele.clientTop}`);
+         console.log(`${e} offsetLeft ${ele.clientLeft}`);
+         console.log(`${e} offsetWidth ${ele.clientWidth}`);
+         console.log(`${e} offsetHeight ${ele.clientHeight}`);
+         console.log("scroll--------------->");
+         console.log(`${e} offsetTop ${ele.scrollTop}`);
+         console.log(`${e} offsetLeft ${ele.scrollLeft}`);
+         console.log(`${e} offsetWidth ${ele.scrollWidth}`);
+         console.log(`${e} offsetHeight ${ele.scrollHeight}`);
+         console.log(`--------> ${ele.offsetParent.id}`)
+         console.log('=====================================');
+      }
+
+      get_off_scroll_client("container");
+      get_off_scroll_client("sub_container");
+      get_off_scroll_client("sub_sub_container");
+      get_off_scroll_client("sub_sub_sub_container");
+
+   </script>
+
+</body>
+
+</html>
